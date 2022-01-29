@@ -47,7 +47,7 @@ let datosValidos=()=>{
 let validacion=(nombre,asunto,mensaje)=>{
       
     let datosCorrectos=true;
-    let validacionNombre = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g;
+    let validacionNombre = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
     if (validacionNombre.test(nombre)==false) {
         let errorNombre=document.querySelector(".errorNombre")
@@ -55,7 +55,7 @@ let validacion=(nombre,asunto,mensaje)=>{
         datosCorrectos=false;
     }
 
-    let validacionAsunto= /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g;
+    let validacionAsunto= /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
     if (validacionAsunto.test(asunto)==false) {
         let errorAsunto=document.querySelector(".errorAsunto")
@@ -63,7 +63,7 @@ let validacion=(nombre,asunto,mensaje)=>{
         datosCorrectos=false;
     }
 
-    let validacionMensaje=/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/g;
+    let validacionMensaje=/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
 
     if (validacionMensaje.test(mensaje)==false) {
         let errorMensaje=document.querySelector(".errorMensaje")
