@@ -1,3 +1,4 @@
+
 //Ejercicio 1
 
 const form=document.getElementById("formulario");
@@ -5,9 +6,8 @@ const btnReinicio=document.getElementById("reiniciar")
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
-    
-    
-    
+    reiniciarErrores()    
+        
     let inputNombre=document.getElementById("nombre").value;
     let inputAsunto=document.getElementById("asunto").value;
     let inputMensaje=document.getElementById("mensaje").value;
@@ -17,22 +17,26 @@ form.addEventListener("submit",(e)=>{
     if(inputs == true) {
         
         datosValidos();
-     };
-     
+     };          
     });
     
     
-    let reiniciar=()=>{
+    let reiniciarInputs=()=>{
         document.querySelector("#nombre").value="";
         document.querySelector("#asunto").value="";
-        document.querySelector("#mensaje").value="";
+        document.querySelector("#mensaje").value="";        
+                  
+    }
+    
+    btnReinicio.addEventListener("click",reiniciarInputs);
+
+    let reiniciarErrores=()=>{
         document.querySelector(".resultado").innerHTML="";  
         document.querySelector(".errorNombre").innerHTML="";
         document.querySelector(".errorAsunto").innerHTML="";
-        document.querySelector(".errorMensaje").innerHTML="";          
+        document.querySelector(".errorMensaje").innerHTML="";
+        
     }
-    
-    btnReinicio.addEventListener("click",reiniciar)
 
 let datosValidos=()=>{
     let resultado=document.querySelector(".resultado");
