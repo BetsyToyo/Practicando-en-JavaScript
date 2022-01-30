@@ -11,15 +11,15 @@ let suma=()=>{
     regexNum=/[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)/
 
     if  (valor1==""){
-        console.log("ingrese un numero en valor en valor 1")
+        alert("ingrese un numero en valor en valor 1")
     }else if  (!regexNum.test(valor1)){
-        console.log("ERROR!! ingrese un numero en valor en valor 1")
+        alert("ERROR!! ingrese un numero en valor en valor 1")
     }
 
     if (!regexNum.test(valor2)) {
-        console.log("ingrese un numero en valor en valor 2")
+        alert("ERROR!! ingrese un numero en valor en valor 2")
     }else if (valor2=="") {
-        console.log("ERROR!! ingrese un numero en valor en valor 2")
+        alert("Ingrese un numero en valor en valor 2")
     }
 
      
@@ -43,15 +43,15 @@ let resta=()=>{
     regexNum=/[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)/
 
     if  (valor1==""){
-        console.log("ingrese un numero en valor en valor 1");
+        alert("ingrese un numero en valor en valor 1");
     }else if  (!regexNum.test(valor1)){
-        console.log("ERROR!! ingrese un numero en valor en valor 1");
+        alert("ERROR!! ingrese un numero en valor en valor 1");
     }
 
     if (!regexNum.test(valor2)) {
-        console.log("ingrese un numero en valor en valor 2");
+        alert("ERROR!! Ingrese un numero en valor en valor 2");
     }else if (valor2=="") {
-        console.log("ERROR!! ingrese un numero en valor en valor 2");
+        alert("Ingrese un numero en valor en valor 2");
     }
 
     valor1=parseFloat(valor1)
